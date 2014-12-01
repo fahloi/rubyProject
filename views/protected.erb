@@ -1,1 +1,24 @@
-<h1 style="font-family:'Helvetica, sans-serif'; color: #ff9900;"><%= @uName %></h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Backend</title>
+        
+</head>
+<body>
+    <h1 style="text-align:center; color: #ff9900;">Blog Posts</h1>
+    <h3 style="text-align:center; color: #ff9900;"><%= flash[:msg] %></h3>
+    <h3 style="text-align:center; color: #ff9900;"><%= flash[:errorMessage] %></h3>
+    <form action="/register" method="post" style="margin-top:20%;text-align:center;">
+        <input type="text" name="title" placeholder="Titel">
+        <input type="text" name="stitle" placeholder="Subtitle">
+        <input type="textarea" name="content" placeholder="Inhalt">
+        <select name="created_by" size="1">
+        <!-- wird später automatisch ausgelesen aus gefilterter Benutzerliste-->
+            <% User.all.each do |user| %>
+            <option><%= user.name %></option>
+            <% end %>
+        </select>
+        <input type="submit" value="">
+    </form>
+</body>
+</html>

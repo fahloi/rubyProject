@@ -5,20 +5,13 @@
         
 </head>
 <body>
-   <h1><%= flash[:errorMessage] %></h1>
-    <form action="/check" method="post" style="margin-top:20%;text-align:center;">
+    <h1 style="text-align:center;font-family:'Helvetica, sans-serif'; color: #ff9900;">Login</h1>
+    <h3 style="text-align:center;font-family:'Helvetica, sans-serif'; color: #ff9900;"><%= flash[:errorMessage] %></h3>
+    <div style="text-align:center;"><a href="/register">Register</a></div>
+    <form action="/login" method="post" style="margin-top:20%;text-align:center;">
         <input type="text" name="name" placeholder="Name">
         <input type="password" name="password" placeholder="Passwort">
-        <!--input type="text" name="content" placeholder="Inhalt"-->
-        <!--<select name="created_by" size="1">
-        <!-- wird später automatisch ausgelesen aus gefilterter Benutzerliste 
-          <option>Heino</option>
-          <option>Michael Jackson</option>
-          <option>Tom Waits</option>
-          <option>Nina Hagen</option>
-          <option>Marianne Rosenberg</option>
-        </select>-->
         <input type="submit" value="">
-    </form> 
+    </form>
 </body>
 </html>

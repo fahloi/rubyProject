@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Backend</title>
+        
+</head>
+<body>
+   <h1 style="text-align:center; color: #ff9900;">Register</h1>
+   <h3 style="text-align:center; color: #ff9900;"><%= flash[:errorMessage] %></h3>
+    <form action="/register" method="post" style="margin-top:20%;text-align:center;">
+        <input type="text" name="name" placeholder="Name">
+        <input type="password" name="pwrd" placeholder="Passwort">
+        <input type="password" name="pwrd2" placeholder="Passwort">
+        <input type="submit" value="">
+    </form>
+</body>
+</html>
